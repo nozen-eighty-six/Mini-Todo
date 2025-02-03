@@ -1,0 +1,162 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/*=============== BASE ===============*/
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Jost", sans-serif !important;
+}
+
+/*input,*/
+button {
+  outline: none;
+  border: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+/*=============== SWIPER-SLIDER ===============*/
+.login__swiper {
+  margin: initial !important;
+}
+
+/* Swiper class */
+.swiper-slide-active,
+.swiper-slide-duplicate-active {
+  scale: 1;
+  z-index: 10000;
+}
+
+/*=============== LOGIN-COMPONENT ===============*/
+
+@keyframes login-animate-fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateX(-15px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes register-animate-fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateX(15px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.register-animate-fadeInUp {
+  animation: register-animate-fadeInUp 0.8s ease-out;
+}
+.login-animate-fadeInUp {
+  animation: login-animate-fadeInUp 0.8s ease-out;
+}
+
+/*********************** HOME ************************/
+@keyframes home-animate {
+  0% {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.home-animate-fadeInUp {
+  animation: home-animate 0.8s ease-out;
+}
+@media screen and (min-width: 768px) {
+  .home__content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 179.2px 1fr;
+  }
+  .current__queue__component {
+    grid-column: 1/3;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .home__content {
+    display: flex;
+  }
+}
+
+/*Task Item*/
+@keyframes task-item {
+  0% {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.task-item-animate-fadeInUp {
+  animation: task-item 0.7s ease-out;
+}
+
+@media screen and (min-width: 390px) {
+  .current__queue__container::-webkit-scrollbar {
+    width: 0.2rem;
+    height: 0.2rem;
+    border-radius: 0.5rem;
+    /*  background-color: transparent;*/
+    background: linear-gradient(
+      to bottom,
+      #1e1539 0%,
+      #1e1738 50%,
+      #1c1531 100%
+    );
+  }
+
+  .current__queue__container::-webkit-scrollbar-thumb {
+    border-radius: 0.5rem;
+    background-color: hsla(230, 16%, 65%);
+    border-top-left-radius: 0.75rem;
+    border-top-right-radius: 0.75rem;
+  }
+  .current__queue__container::-webkit-scrollbar-track {
+    background-color: transparent;
+  }
+}
+
+/*current__queue__container*/
+
+@media screen and (min-width: 1024px) {
+  .current__queue__container::-webkit-scrollbar {
+    width: 0.6rem;
+    border-radius: 0.5rem;
+    /*  background-color: transparent;*/
+    background: linear-gradient(
+      to bottom,
+      #1e1539 0%,
+      #1e1738 50%,
+      #1c1531 100%
+    );
+  }
+
+  .current__queue__container::-webkit-scrollbar-thumb {
+    width: 0.6rem;
+    border-radius: 0.5rem;
+    background-color: hsla(230, 16%, 65%);
+    border-top-left-radius: 0.75rem;
+    border-top-right-radius: 0.75rem;
+  }
+}
