@@ -51,5 +51,9 @@ Este proyecto fue desarrollado con las siguientes tecnologías:
 - Spring Boot
 - MySQL
 
+## 📷 Capturas de Pantalla
+
+![Vista Principal](./public/screenshots/home.png)
+
 
 
